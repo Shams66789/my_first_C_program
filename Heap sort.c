@@ -11,12 +11,12 @@ For any node in position i,
 #include<conio.h>
 
 
-void max_heap(int arr[,int n)
+void max_heap(int arr[],int n)
 {
     int i,root,c,temp;
     
     for(i = 1; i <= n; i++)
-    
+    {
         c = i;
         do
         {
@@ -28,7 +28,7 @@ void max_heap(int arr[,int n)
                 arr[c] = temp;
             }
             c = root;
-        
+        }
         while(c != 0);
     }
 }
@@ -40,14 +40,14 @@ void main()
     printf("enter 10 numbers\n");
     for(i=0; i<10; i++)
     {
-        scanf("%s",&arr[i]);
+        scanf("%d",&arr[i]);
     }
     
     
     //arrange the array
     for(i=0; i<10; i++)
     {
-        max_he(arr,sie-i);
+        max_heap(arr,sie-i);
         
         //replace 1st element with last element
         temp=arr[0];
@@ -57,7 +57,7 @@ void main()
     
     for(i=0; i<10; i++)
     {
-        printf("%",arr[i]);
+        printf("%d",arr[i]);
     }
     
     
